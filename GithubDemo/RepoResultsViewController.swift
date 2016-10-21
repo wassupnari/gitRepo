@@ -52,7 +52,8 @@ class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableV
             // Setup tableview
             self.repoTableView.dataSource = self
             self.repoTableView.delegate = self
-            
+            self.repoTableView.estimatedRowHeight = 150
+            self.repoTableView.rowHeight = UITableViewAutomaticDimension
             self.repoTableView.reloadData()
 
             MBProgressHUD.hide(for: self.view, animated: true)

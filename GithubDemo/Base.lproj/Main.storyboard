@@ -66,11 +66,13 @@
                                                 <constraint firstItem="0iy-kE-hna" firstAttribute="top" secondItem="qBb-SM-vZT" secondAttribute="topMargin" id="CVP-Bg-2wN"/>
                                                 <constraint firstItem="7qQ-yi-zkM" firstAttribute="top" secondItem="qBb-SM-vZT" secondAttribute="top" constant="8" id="DVn-WG-Jrl"/>
                                                 <constraint firstAttribute="trailing" secondItem="pog-Bc-g04" secondAttribute="trailing" constant="8" id="KGc-vL-avs"/>
+                                                <constraint firstAttribute="bottom" secondItem="pog-Bc-g04" secondAttribute="bottom" constant="8" id="Mbc-cf-VjO"/>
                                                 <constraint firstItem="UHP-m7-z2y" firstAttribute="leading" secondItem="qBb-SM-vZT" secondAttribute="leading" constant="8" id="PYy-wN-DgU"/>
                                                 <constraint firstItem="UHP-m7-z2y" firstAttribute="top" secondItem="Ro6-oa-pJP" secondAttribute="bottom" constant="20" id="VrG-C6-3hd"/>
                                                 <constraint firstItem="7qQ-yi-zkM" firstAttribute="leading" secondItem="0iy-kE-hna" secondAttribute="trailing" constant="8" id="jE7-L9-LZt"/>
                                                 <constraint firstItem="pog-Bc-g04" firstAttribute="top" secondItem="qBb-SM-vZT" secondAttribute="topMargin" constant="50" id="uxw-Ec-Egk"/>
                                                 <constraint firstItem="pog-Bc-g04" firstAttribute="leading" secondItem="UHP-m7-z2y" secondAttribute="trailing" constant="8" id="xfl-xD-Tlf"/>
+                                                <constraint firstAttribute="bottom" secondItem="UHP-m7-z2y" secondAttribute="bottom" constant="8" id="zJr-wE-glT"/>
                                                 <constraint firstItem="Ro6-oa-pJP" firstAttribute="leading" secondItem="qBb-SM-vZT" secondAttribute="leading" constant="8" id="zwo-QY-byY"/>
                                             </constraints>
                                         </tableViewCellContentView>

@@ -16,7 +16,7 @@ class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableV
     var searchBar: UISearchBar!
     var searchSettings = GithubRepoSearchSettings()
 
-    var repos: [GithubRepo]!
+    var repos: [GithubRepo]! = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,9 +64,29 @@ class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = repoTableView.dequeueReusableCell(withIdentifier: "codepath.RepoCell", for: indexPath) as! RepoCell
         let name = repos[indexPath.row].name
+        let url = repos[indexPath.row].ownerAvatarURL
+        let avatarURL = URL(string: url!)
         
         cell.RepoNameLabel.text = name
         cell.descriptionLabel.text = repos[indexPath.row].desc
+        
+        
+        let posterURLRequest = URLRequest(url: avatarURL!)
+        cell.avatarImageView.setImageWith(posterURLRequest, placeholderImage: nil, success: { (imageRequest, imageResponse, image) -> Void in
+            
+            // imageResponse will be nil if the image is cached
+            if imageResponse != nil {
+                //print("Image was NOT cached, fade in image")
+                cell.avatarImageView.alpha = 0
+                cell.avatarImageView.image = image
+                UIView.animate(withDuration: 0.3, animations: { () -> Void in
+                    cell.avatarImageView.alpha = 1.0
+                })
+            } else {
+                //print("Image was cached so just update the image")
+                cell.avatarImageView.image = image
+            }
+            }, failure: nil)
         
         // Set image
         /*

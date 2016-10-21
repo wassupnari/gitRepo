@@ -54,7 +54,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pog-Bc-g04">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pog-Bc-g04">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -65,6 +65,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="7qQ-yi-zkM" secondAttribute="trailing" constant="8" id="CCF-p8-cVV"/>
                                                 <constraint firstItem="0iy-kE-hna" firstAttribute="top" secondItem="qBb-SM-vZT" secondAttribute="topMargin" id="CVP-Bg-2wN"/>
                                                 <constraint firstItem="7qQ-yi-zkM" firstAttribute="top" secondItem="qBb-SM-vZT" secondAttribute="top" constant="8" id="DVn-WG-Jrl"/>
+                                                <constraint firstAttribute="trailing" secondItem="pog-Bc-g04" secondAttribute="trailing" constant="8" id="KGc-vL-avs"/>
                                                 <constraint firstItem="UHP-m7-z2y" firstAttribute="leading" secondItem="qBb-SM-vZT" secondAttribute="leading" constant="8" id="PYy-wN-DgU"/>
                                                 <constraint firstItem="UHP-m7-z2y" firstAttribute="top" secondItem="Ro6-oa-pJP" secondAttribute="bottom" constant="20" id="VrG-C6-3hd"/>
                                                 <constraint firstItem="7qQ-yi-zkM" firstAttribute="leading" secondItem="0iy-kE-hna" secondAttribute="trailing" constant="8" id="jE7-L9-LZt"/>

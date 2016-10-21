@@ -10,8 +10,9 @@ import UIKit
 import MBProgressHUD
 
 // Main ViewController
-class RepoResultsViewController: UIViewController {
+class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var repoTableView: UITableView!
     var searchBar: UISearchBar!
     var searchSettings = GithubRepoSearchSettings()
 
@@ -47,11 +48,44 @@ class RepoResultsViewController: UIViewController {
             
             // Store returned repos
             self.repos = newRepos
+            
+            // Setup tableview
+            self.repoTableView.dataSource = self
+            self.repoTableView.delegate = self
+            
+            self.repoTableView.reloadData()
 
             MBProgressHUD.hide(for: self.view, animated: true)
             }, error: { (error) -> Void in
                 print(error)
         })
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = repoTableView.dequeueReusableCell(withIdentifier: "codepath.RepoCell", for: indexPath) as! RepoCell
+        let name = repos[indexPath.row].name
+        
+        cell.RepoNameLabel.text = name
+        cell.descriptionLabel.text = repos[indexPath.row].desc
+        
+        // Set image
+        /*
+        Alamofire.request("https://image.tmdb.org/t/p/w300\(repo.ownerAvatarURL)").responseImage { response in
+            cell.avatarImageView.image = response.result.value
+            // Insert data to pass them to detail page
+            //self.imageList.insert(cell.avatarImageView.image!, at:indexPath.row)
+            
+        }*/
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return repos.count
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+        repoTableView.deselectRow(at: indexPath, animated: true)
+        // do something here
     }
 }
 

@@ -48,12 +48,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fork" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qQ-yi-zkM">
+                                                    <frame key="frameInset" minX="312" minY="8" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Star" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iy-kE-hna">
+                                                    <frame key="frameInset" minX="164" minY="8" width="124" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="RepoNameLabel" destination="Ro6-oa-pJP" id="YoT-YG-tb1"/>
                                             <outlet property="avatarImageView" destination="UHP-m7-z2y" id="Goa-qx-3jn"/>
                                             <outlet property="descriptionLabel" destination="pog-Bc-g04" id="zRS-H7-QtC"/>
+                                            <outlet property="forkLabel" destination="7qQ-yi-zkM" id="29S-XL-TqK"/>
+                                            <outlet property="starLabel" destination="0iy-kE-hna" id="qlX-BN-zSC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

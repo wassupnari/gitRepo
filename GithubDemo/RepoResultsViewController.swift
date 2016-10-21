@@ -69,6 +69,8 @@ class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableV
         
         cell.RepoNameLabel.text = name
         cell.descriptionLabel.text = repos[indexPath.row].desc
+        cell.forkLabel.text = String(repos[indexPath.row].forks!)
+        cell.starLabel.text = String(repos[indexPath.row].stars!)
         
         
         let posterURLRequest = URLRequest(url: avatarURL!)

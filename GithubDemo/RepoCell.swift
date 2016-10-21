@@ -14,6 +14,8 @@ class RepoCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var forkLabel: UILabel!
+    @IBOutlet weak var starLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
